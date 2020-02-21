@@ -17,7 +17,7 @@ nuget restore .\settingsHelper\SettingsHelper.sln
 
 $env:VisualStudioVersion = '15.0'
 $settingsHelperDir = Join-Path $rootDir "settingsHelper"
-Invoke-Command $msbuild "SettingsHelper.sln /p:Configuration=Release /p:Platform=`"x64`"" $settingsHelperDir
+Invoke-Command $msbuild "SettingsHelper.sln /p:Configuration=Release /p:Platform=`"Any CPU`"" $settingsHelperDir
 
 # Build the volumeControl solution
 $volumeControlDir = Join-Path $rootDir "gpii\node_modules\nativeSettingsHandler\nativeSolutions\VolumeControl"
